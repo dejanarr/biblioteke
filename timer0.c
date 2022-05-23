@@ -18,8 +18,8 @@ void timer0Init()
 	TCCR0A = 0x02;
 	// Provera frekvencije takta prilikom kompilacije
 	#if F_CPU > 20000000
-		# error " Frekvencija   takta   mora   biti   manja  od 20 MHz!"
-	# endif
+	#error " Frekvencija   takta   mora   biti   manja  od 20 MHz!"
+	#endif
 	// Inicijalizacija promenljivih za preskaler i periodu tajmer / brojac modula 0
 	uint32_t n = F_CPU / 1000;
 	uint8_t clksel = 1;
